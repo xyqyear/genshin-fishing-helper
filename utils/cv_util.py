@@ -15,9 +15,7 @@ def find_image_location(
         image, template, cv2.TM_CCOEFF_NORMED, mask=alpha_channel
     )
 
-    # Nomrmalize result data to percent (0-1)
-    # result = cv2.normalize(result, None, 0, 1, cv2.NORM_MINMAX, -1)
-    _minVal, maxVal, _minLoc, maxLoc = cv2.minMaxLoc(result, None)
+    _, maxVal, _, maxLoc = cv2.minMaxLoc(result, None)
     return (maxVal, maxLoc)
 
 
