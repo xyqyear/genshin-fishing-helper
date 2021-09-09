@@ -7,7 +7,7 @@ class Mouse:
         self._left_down = False
         self._middle_clicked = True
 
-        def _callback(self):
+        def _callback():
             # x = x xor True means toggle
             self._middle_clicked ^= True
             logging.info(f"Program {'disabled' if self._middle_clicked else 'enabled'}")
